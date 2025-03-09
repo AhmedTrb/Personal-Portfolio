@@ -2,7 +2,7 @@
     {
       "title": "Oil Spill Detection with AI",
       "description": "Developed a deep learning model to detect oil spills in the Mediterranean using SAR satellite images. The project included data preprocessing, model training, and visualization on a web platform.",
-      "image": "src/assets/images/oilspill.png",
+      "image": "src/assets/images/AESS.png",
       "href": "/projects/oil-spill-detection",
       "tags": ["Computer Vision", "Deep Learning", "Satellite Imaging","Python","Tensorflow"],
       "github": "https://github.com/AhmedTrb/AESS-challenge-ENSI-SB",
