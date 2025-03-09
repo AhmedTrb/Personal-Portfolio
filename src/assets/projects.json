@@ -2,7 +2,7 @@
     {
       "title": "Oil Spill Detection with AI",
       "description": "Developed a deep learning model to detect oil spills in the Mediterranean using SAR satellite images. The project included data preprocessing, model training, and visualization on a web platform.",
-      "image": "/images/oil-spill-detection.png",
+      "image": "src/assets/images/oilspill.png",
       "href": "/projects/oil-spill-detection",
       "tags": ["Computer Vision", "Deep Learning", "Satellite Imaging","Python","Tensorflow"],
       "github": "https://github.com/AhmedTrb/AESS-challenge-ENSI-SB",
@@ -11,7 +11,7 @@
     {
       "title": "Project Management Graph Tool",
       "description": "A project management application that visualizes tasks as a directed graph using Kahn’s algorithm for topological sorting. Includes team management and task assignment.",
-      "image": "/images/project-management-tool.png",
+      "image": "src/assets/images/projectM.png",
       "href": "/projects/project-management",
       "tags": ["Next.js", "Graph Algorithms", "Express.js", "PostgreSQL","Prisma","Typescript","Tailwind CSS"],
       "github": "https://github.com/AhmedTrb/Project-Management-web-app",
@@ -21,11 +21,29 @@
     {
       "title": "Portfolio Website",
       "description": "A personal portfolio showcasing my projects, experience, and skills, built with React and Tailwind CSS for a clean and modern design.",
-      "image": "/images/portfolio.png",
+      "image": "src/assets/images/portfolio.png",
       "href": "/projects/portfolio",
       "tags": ["React", "Tailwind CSS", "Frontend"],
-      "github": "https://github.com/your-repo",
+      "github": "https://github.com/AhmedTrb/Personal-Portfolio",
       "date": "2025-03"
+    },
+    {
+      "title": "PDF Highlight Extractor",
+      "description": "Python-based desktop application that extracts highlighted text and comments from PDF files, organizes them, and outputs them into Markdown files. It categorizes highlights based on color or user-defined criteria, making it easier to structure and review important insights.",
+      "image": "src/assets/images/pdf.png",
+      "href": "/projects/pdf-highlight-extractor",
+      "tags": ["Python", "PySlide6", "PDF Processing"],
+      "github": "https://github.com/AhmedTrb/PDF_highlight_extractor",
+      "date": "2025-02"
+    },
+    {
+      "title": "E-Commerce Website",
+      "description": "A full-stack e-commerce website using HTML, CSS, JavaScript for the frontend, and PHP with MySQL for back-end. It includes user authentication, product management, and order processing.",
+      "image": "src/assets/images/ecommerce.png",
+      "href": "/projects/ecommerce-website",
+      "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      "github": "https://github.com/AhmedTrb/E-commerce-web-project",
+      "date": "2024-03"
     }
   ]
   

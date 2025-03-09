@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
 
 type Props = {
@@ -15,8 +15,8 @@ type Props = {
 export default function ({title, description, image, href, tags, github, demo, date}: Props) {
   return (
     
-    <Link to={href} className='flex flex-col gap-y-4  rounded-lg cursor-pointer'>
-        <img src={image} alt={title} className='rounded-t-lg object-cover'/>
+    <Link to={href} className='flex flex-col gap-y-4  rounded-lg cursor-pointer shadow-sm transition-all duration-300'>
+        <img src={image} alt={title} className='rounded-t-lg object-contain'/>
         <div className='flex flex-col gap-y-2 p-4'>
             <h1 className='text-2xl font-bold'>{title}</h1>
             <p className='text-text-secondary text-sm'>{date}</p>
