@@ -115,7 +115,7 @@ export default function HomePage() {
         </motion.div>
 
       {/* HERO SECTION */}
-      <div className="flex flex-col-reverse md:flex-row items-center justify-center lg:justify-between w-full min-h-screen px-6 md:px-12 lg:px-[7%] gap-6 py-6">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-center lg:justify-between w-full min-h-screen px-6 md:px-12 lg:px-[7%] gap-6 py-8">
         {/* Text Content */}
         <div className="flex flex-col space-y-4 w-full md:w-2/3 lg:w-1/2 text-center md:text-left">
           <h1 className="text-[3.5rem] md:text-[4.5rem] font-bold text-white hover:underline transition-all duration-500 cursor-pointer">
@@ -170,19 +170,35 @@ export default function HomePage() {
       Here are some of my recent projects:
       </p>
       <hr className="w-full border-text-secondary opacity-20"/>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* Project Card */}
-        
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
-        ))}
-      </div>
+      <motion.div 
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }} // Ensures animation runs only once
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.5, duration: 1 } }
+      }}
+    >
+      {projects.map((project, index) => (
+        <motion.div 
+          key={index}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 }
+          }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+        >
+          <ProjectCard {...project} />
+        </motion.div>
+      ))}
+    </motion.div>
     </section>
     <section className="flex flex-col gap-y-6 w-full  px-6 md:px-12 lg:px-[7%]" id="contact">
       <hr className="w-full flex self-center border-text-secondary opacity-20"/>
       <h1 className="font-bold text-[4rem] text-white">Contact Me :</h1>
 
-      <p className="text-text-secondary text-2xl w-full lg:w-2/3">Currently looking for software engineering and data science internship positions. 
+      <p className="text-text-secondary text-2xl w-full lg:w-2/3">Currently looking for software engineering internship position. 
         Whether you have any open opportunity or just want to say hi, my inbox is always open!</p>
 
         <div className="flex justify-start items-center gap-x-4 mt-6">
