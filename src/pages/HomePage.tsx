@@ -2,7 +2,6 @@ import { useState } from "react";
 import myphoto from "../assets/pdp.jpg";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
-import { Link } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
 import projects from "../assets/projects.json";
 import linkedinIcon from '../assets/icons/linkedin.svg';
@@ -109,7 +108,7 @@ export default function HomePage() {
           <ScrollLink to="contact" smooth={true} duration={500} className="block cursor-pointer px-2 py-1">
             Contact
           </ScrollLink>
-          <a href="/resume" className="block px-2 py-1 bg-white text-black rounded-lg">
+          <a href="https://drive.google.com/file/d/1uyU0vxEPrKkHQgCorzQxhFW9fbbt1UOv/view?usp=sharing" className="block px-2 py-1 bg-white text-black rounded-lg">
             Resume
           </a>
         </motion.div>
@@ -126,12 +125,12 @@ export default function HomePage() {
           </p>
 
           <div className="mt-6 flex justify-center md:justify-start space-x-4">
-            <Link to="contact" className="bg-white text-background px-4 py-2 rounded-lg font-medium ">
+            <a href="mailto:ahmed.trabelsi@ensi-uma.tn" className="bg-white text-background px-4 py-2 rounded-lg font-medium cursor-pointer">
                 Get in Touch!
-            </Link>
-            <Link to="projects" className="bg-background text-white border-2 border-border px-4 py-2 rounded-lg font-medium">
+            </a>
+            <ScrollLink to="projects" smooth={true} duration={500} className="bg-background text-white border-2 border-border px-4 py-2 rounded-lg font-medium cursor-pointer">
                 View Projects
-            </Link>
+            </ScrollLink>
           </div>
         </div>
 
@@ -171,7 +170,7 @@ export default function HomePage() {
       </p>
       <hr className="w-full border-text-secondary opacity-20"/>
       <motion.div 
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-4"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }} // Ensures animation runs only once
@@ -180,7 +179,7 @@ export default function HomePage() {
         visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.5, duration: 1 } }
       }}
     >
-      {projects.map((project, index) => (
+      {projects.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((project, index) => (
         <motion.div 
           key={index}
           variants={{
@@ -214,9 +213,10 @@ export default function HomePage() {
           </a>
         </div>
     </section>
-    <footer className="flex justify-center items-center w-full h-24 bg-background text-text-secondary border-t-1 border-border">
+    <footer className="flex justify-center items-center w-full h-12 bg-background text-text-secondary border-t-1 border-border">
       <p>© 2025 Ahmed Trabelsi. All rights reserved.</p>
     </footer>
+    
     </div>
   );
 }

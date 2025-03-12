@@ -3,7 +3,7 @@
     "title": "Project Management Graph Tool",
     "description": "A project management application that visualizes tasks as a directed graph using Kahn’s algorithm for topological sorting. Includes team management and task assignment.",
     "image": "./images/projectM.png",
-    "href": "#",
+    "href": "/project-management",
     "tags": ["Next.js", "Graph Algorithms", "Express.js", "PostgreSQL","Prisma","Typescript","Tailwind CSS"],
     "github": "https://github.com/AhmedTrb/Project-Management-web-app",
     "demo": "https://project-management-web-app-lilac.vercel.app",
