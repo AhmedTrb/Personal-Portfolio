@@ -13,7 +13,7 @@
       "title": "Oil Spill Detection with AI",
       "description": "Developed a deep learning model to detect oil spills in the Mediterranean using SAR satellite images. The project included data preprocessing, model training, and visualization on a web platform.",
       "image": "./images/AESS.png",
-      "href": "#",
+      "href": "/med-guard",
       "tags": ["Computer Vision", "Deep Learning", "Satellite Imaging","Python","Tensorflow"],
       "github": "https://github.com/AhmedTrb/AESS-challenge-ENSI-SB",
       "date": "2024-12"
@@ -22,7 +22,7 @@
       "title": "PDF Highlight Extractor",
       "description": "Python-based desktop application that extracts highlighted text and comments from PDF files, organizes them, and outputs them into Markdown files. It categorizes highlights based on color or user-defined criteria, making it easier to structure and review important insights.",
       "image": "./images/pdf.png",
-      "href": "#",
+      "href": "/highlight-extractor",
       "tags": ["Python", "PySlide6", "PDF Processing"],
       "github": "https://github.com/AhmedTrb/PDF_highlight_extractor",
       "date": "2025-02"
