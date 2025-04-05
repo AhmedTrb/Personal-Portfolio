@@ -1,9 +1,14 @@
 import schemaImage from "./images/schema.png";
 import { Link } from "react-router-dom";
 import previewImage from "./images/preview.png";
+import { useEffect } from "react";
 type Props = {};
 
 export default function ProjectManagement({}: Props) {
+  // Scroll to top on page load
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   return (
     <>
       {/* Navbar */}
@@ -16,7 +21,7 @@ export default function ProjectManagement({}: Props) {
       {/* CASE STUDY */}
       <div className="flex flex-col justify-start px-6 md:px-12 lg:px-[20%] gap-6 py-6 pt-18">
         {/* Title & Overview */}
-        <h1 className="text-[2.5rem] lg:text-[3.5rem] font-bold">
+        <h1 className="text-[2.5rem] lg:text-[3.5rem] font-bold leading-tight text-white">
           Project Management Graph Tool:
           <br /> A Visual Approach to Task Dependencies
         </h1>

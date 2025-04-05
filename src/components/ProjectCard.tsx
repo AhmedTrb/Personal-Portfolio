@@ -28,7 +28,7 @@ export default function ({title, description, image, href, tags, github, demo, d
         </Link>
         <div className='flex gap-x-4 mt-6 px-4'>
             <a href={github} target="_blank"  className='bg-background flex items-center gap-x-2 text-white border-2 border-border px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300'><img alt='github' src={githubIcon} className='w-6 h-6'/> Github</a>
-            {demo && <a href={demo} target="_blank" className='bg-white text-background px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300'>Demo</a>}
+            {demo && <a href={demo} target="_blank" className='bg-white text-background px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300'>See it Live!</a>}
         </div>
         </div>
   )

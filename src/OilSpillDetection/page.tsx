@@ -8,8 +8,13 @@ import oilSpill from "./assets/oilspillimage.png";
 import modelArchitecture from "./assets/model overview.png";
 import dashboard from "./assets/dashboard.png";
 import dataset from "./assets/dataset.png";
+import { useEffect } from "react";
 
 export default function OilSpillDetection() {
+  // Scroll to top on page load
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <>
       {/* Navbar */}
@@ -139,9 +144,9 @@ export default function OilSpillDetection() {
             <strong className="text-white">Dataset & Preprocessing:</strong> We
             used SAR images from the Sentinel-1 satellite, which offers
             high-resolution, Level-1 GRD (Ground Range Detected) data. The
-            dataset we used was already provided as 256×256 patches,
-            each composed of a preprocessed (calibrated and filtered) raw SAR image and its corresponding ground truth
-            mask (GTM).
+            dataset we used was already provided as 256×256 patches, each
+            composed of a preprocessed (calibrated and filtered) raw SAR image
+            and its corresponding ground truth mask (GTM).
             {/* Dataset */}
             <div className="md:px-[10%] px-4 mt-6">
               <img
@@ -253,6 +258,23 @@ export default function OilSpillDetection() {
             with deep learning for rapid spill detection. Future iterations
             could real-time weather feeds, and stakeholder feedback to reduce
             false alarms and prioritize high-risk zones.
+            <br />
+            <br />
+            Finally, this project was a true collaborative effort—none of it
+            would have been possible without the teamwork and dedication of my
+            talented teammates:{" "}
+            <strong className="text-white hover:underline">
+              <a
+                href="https://www.linkedin.com/in/oumayma-hammami111/"
+                target="_blank"
+              >
+                Oumayma Hammami
+              </a>
+            </strong>
+            , <strong className="text-white">Nada Ben Abdelhafidh</strong>, and{" "}
+            <strong className="text-white">Atef Regaya</strong>. Their
+            contributions and commitment were invaluable throughout this
+            journey.
           </p>
         </div>
 

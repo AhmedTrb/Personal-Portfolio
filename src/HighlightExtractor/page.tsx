@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import coverPhoto from "./images/cover.png";
 import app from './images/app.png';
 import githubIcon from "../assets/icons/github.svg";
+import { useEffect } from "react";
 export default function HighlightExtractor() {
+  // Scroll to top on page load
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   return (
     <>
       {/* Navbar */}

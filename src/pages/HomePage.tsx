@@ -91,7 +91,7 @@ export default function HomePage() {
               </ScrollLink>
               <div className="bg-white px-3 py-1 rounded-lg font-medium text-background">
                 <a
-                  href="https://drive.google.com/file/d/1uyU0vxEPrKkHQgCorzQxhFW9fbbt1UOv/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1JYG8O2Ur4f5qBbQCMeaNxFKo8e2bI-iN/view?usp=sharing"
                   target="_blank"
                 >
                   Resume
@@ -145,7 +145,7 @@ export default function HomePage() {
             Contact
           </ScrollLink>
           <a
-            href="https://drive.google.com/file/d/1uyU0vxEPrKkHQgCorzQxhFW9fbbt1UOv/view?usp=sharing"
+            href="https://drive.google.com/file/d/1JYG8O2Ur4f5qBbQCMeaNxFKo8e2bI-iN/view?usp=sharing"
             className="block px-2 py-1 bg-white text-black rounded-lg"
           >
             Resume
@@ -156,7 +156,7 @@ export default function HomePage() {
         <div className="flex flex-col-reverse md:flex-row items-center justify-center lg:justify-between w-full min-h-screen px-6 md:px-12 lg:px-[7%] gap-6 py-8">
           {/* Text Content */}
           <div className="flex flex-col space-y-4 w-full md:w-2/3 lg:w-1/2 text-center md:text-left">
-            <h1 className="text-[3.5rem] md:text-[4.5rem] font-bold text-white hover:underline transition-all duration-500 cursor-pointer">
+            <h1 className="text-[3.5rem] md:text-[4.5rem] font-bold text-white hover:underline transition-all duration-500 cursor-pointer leading-tight">
               Hi, I'm Ahmed Trabelsi.
             </h1>
             <p className="text-xl font-bold text-text-secondary">
@@ -219,14 +219,14 @@ export default function HomePage() {
         </p>
       </section>
       {/* Activities section */}
-      <section
+      {/* <section
         className="flex flex-col gap-y-6 w-full px-6 md:px-12 lg:px-[7%]"
         id="activities"
       >
         <h1 className="font-bold text-[4rem] text-white">Activities</h1>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Hackathons */}
+          
           <div className="bg-gray-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
             <h2 className="text-2xl font-semibold text-white flex items-center gap-2">
               🚀 Hackathons
@@ -249,7 +249,7 @@ export default function HomePage() {
             </ul>
           </div>
 
-          {/* Competitions */}
+          
           <div className="bg-gray-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
             <h2 className="text-2xl font-semibold text-white flex items-center gap-2">
               🏅 Competitions
@@ -272,7 +272,7 @@ export default function HomePage() {
             </ul>
           </div>
 
-          {/* Leadership & Community */}
+          
           <div className="bg-gray-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
             <h2 className="text-2xl font-semibold text-white flex items-center gap-2">
               🌍 Leadership & Community
@@ -294,7 +294,7 @@ export default function HomePage() {
             </ul>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Projects Section */}
       <section
