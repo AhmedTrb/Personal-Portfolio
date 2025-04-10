@@ -1,6 +1,3 @@
-import React from 'react';
-
-// Props interface remains the same
 type Props = {
   bgImage: string;
   title: string;
