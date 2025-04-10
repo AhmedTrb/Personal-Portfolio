@@ -7,9 +7,49 @@ import projects from "../assets/projects.json";
 import linkedinIcon from "../assets/icons/linkedin.svg";
 import githubIcon from "../assets/icons/github.svg";
 import emailIcon from "../assets/icons/gmail.svg";
+import SkillCard from "../components/SkillsCard";
+
+import ActivityCard from "../components/ActivityCard";
+import activities from "../assets/activities.json";
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const softwareSkills = [
+    "C/C++",
+    "Java",
+    "Python",
+    "Git & GitHub",
+    "Docker",
+    "SQL / PL-SQL",
+    "PostgreSQL",
+    "MongoDB",
+    "REST APIs",
+    "Postman",
+  ];
 
+  const webMobileSkills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Express.js",
+    "MERN Stack",
+    "TailwindCSS",
+    "Flutter",
+    "Dart",
+  ];
+
+  const aiDataScienceSkills = [
+    "Machine Learning",
+    "Scikit-learn",
+    "TensorFlow",
+    "NLP",
+    "Numpy",
+    "Pandas",
+    "Matplotlib",
+  ];
   return (
     <div className="flex flex-col gap-y-16">
       {/* Landing Page */}
@@ -195,7 +235,7 @@ export default function HomePage() {
 
       {/* About Section */}
       <section
-        className="flex flex-col gap-y-6 w-full  px-6 md:px-12 lg:px-[7%] md:w-1/2 lg:w-2/3"
+        className="flex flex-col gap-y-6 w-full min-h-screen  px-6 md:px-12 lg:px-[7%] lg:w-2/3"
         id="about"
       >
         <h1 className="font-bold text-[4rem] text-white">About Me :</h1>
@@ -218,83 +258,44 @@ export default function HomePage() {
           through technology.
         </p>
       </section>
-      {/* Activities section */}
-      {/* <section
-        className="flex flex-col gap-y-6 w-full px-6 md:px-12 lg:px-[7%]"
-        id="activities"
-      >
-        <h1 className="font-bold text-[4rem] text-white">Activities</h1>
 
+      {/* Technologies */}
+      <section className="flex flex-col gap-y-6 px-6 md:px-12 lg:px-[7%] mb-[20%]">
+        <h1 className="font-bold text-[4rem]  text-white">Technologies</h1>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          <div className="bg-gray-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-            <h2 className="text-2xl font-semibold text-white flex items-center gap-2">
-              🚀 Hackathons
-            </h2>
-            <p className="text-gray-300 mt-2">
-              I thrive in fast-paced, collaborative environments where
-              creativity meets technology. From building AI-driven solutions to
-              tackling real-world problems, hackathons have shaped my skills and
-              mindset.
-            </p>
-            <ul className="mt-4 text-gray-400">
-              <li>
-                🏆 <strong>TSYP12 AESS Challenge</strong> – 3rd Place
-              </li>
-              <li>
-                ⚡ Multiple ENSI Hackathons – AI, Web, and Competitive
-                Programming
-              </li>
-              <li>💡 Innovative projects in AI, ML, and Web</li>
-            </ul>
-          </div>
-
-          
-          <div className="bg-gray-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-            <h2 className="text-2xl font-semibold text-white flex items-center gap-2">
-              🏅 Competitions
-            </h2>
-            <p className="text-gray-300 mt-2">
-              I’ve put my problem-solving skills to the test in various coding
-              and AI competitions, pushing my limits and refining my technical
-              expertise.
-            </p>
-            <ul className="mt-4 text-gray-400">
-              <li>
-                🤖 <strong>Tunisian Olympiad in Programming</strong> – Early
-                exposure to problem-solving
-              </li>
-              <li>
-                📊 <strong>IEEE AESS Technical Challenge</strong> – AI-driven
-                project competition
-              </li>
-              <li>🧠 Competitive programming contests & AI challenges</li>
-            </ul>
-          </div>
-
-          
-          <div className="bg-gray-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-            <h2 className="text-2xl font-semibold text-white flex items-center gap-2">
-              🌍 Leadership & Community
-            </h2>
-            <p className="text-gray-300 mt-2">
-              Beyond coding, I actively contribute to the tech community,
-              organizing events and mentoring peers.
-            </p>
-            <ul className="mt-4 text-gray-400">
-              <li>
-                🎤 <strong>IEEE ENSI Senior Member</strong> – Organized{" "}
-                <strong>GODS 3.0</strong> & led hackathon teams
-              </li>
-              <li>
-                📢 <strong>Open Startup Tunisia</strong> – Part of a startup
-                building an MVP
-              </li>
-              <li>🤝 Knowledge-sharing & mentoring in software development</li>
-            </ul>
-          </div>
+          <SkillCard title="Software Engineering" skills={softwareSkills} />
+          <SkillCard
+            title="Web & Mobile Development"
+            skills={webMobileSkills}
+          />
+          <SkillCard title="AI & Data Science" skills={aiDataScienceSkills} />
         </div>
-      </section> */}
+      </section>
+      {/* Activities */}
+      <section className="flex flex-col gap-y-6 w-full  px-6 md:px-12 lg:px-[7%]">
+        <h1 className="font-bold text-[4rem] text-white">Activities :</h1>
+        <p className="text-text-secondary text-lg w-full lg:w-2/3">
+          Participating in hackathons and competitions has been my sandbox for
+          experimentation, pushing me to learn new technologies on the fly. Each
+          challenge taught me resilience under pressure and the value of rapid
+          iteration.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-4">
+          {activities
+            .sort(
+              (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+            )
+            .map((activity, index) => (
+              <ActivityCard
+                key={index}
+                bgImage={activity.bgImage}
+                title={activity.title}
+                description={activity.description}
+                date={activity.date}
+              />
+            ))}
+        </div>
+      </section>
 
       {/* Projects Section */}
       <section
@@ -303,7 +304,7 @@ export default function HomePage() {
       >
         <h1 className="font-bold text-[4rem] text-white">Projects :</h1>
 
-        <p className="text-text-secondary text-lg w-full lg:w-2/3 md:w-1/2">
+        <p className="text-text-secondary text-lg w-full lg:w-2/3">
           I have worked on a variety of projects ranging from web development to
           machine learning and AI. Here are some of my recent projects:
         </p>
@@ -345,7 +346,9 @@ export default function HomePage() {
         id="contact"
       >
         <hr className="w-full flex self-center border-text-secondary opacity-20" />
-        <h1 className="font-bold text-[4rem] text-white">Contact Me :</h1>
+        <h1 className="font-bold text-[4rem] text-white leading-tight">
+          Contact Me :
+        </h1>
 
         <p className="text-text-secondary text-2xl w-full lg:w-2/3">
           Currently looking for software engineering internship position.

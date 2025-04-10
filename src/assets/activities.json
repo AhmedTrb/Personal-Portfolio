@@ -1,0 +1,44 @@
+[
+  {
+    "bgImage": "/images/TSYP12.jpg",
+    "title": "IEEE AESS Technical Challenge Lead, TSYP12",
+    "description": "Led the IEEE Aerospace and Electronic Systems Society (AESS) Technical challenge team during the TSYP12 event, focused on developing an oil spill detection system using Satellite imaging.",
+    "date": "December 2024"
+  },
+  {
+    "bgImage": "/images/gods.png",
+    "title": "Media Team Member, IEEE Go Data Science 3.0 Hackathon",
+    "description": "Contributed to the organization’s team in for the IEEE Go Data Science 3.0 hackathon part of the media organization team, handling social media posts",
+    "date": "February 2024"
+  },
+  {
+    "bgImage": "/images/ehealth.jpg",
+    "title": "Participant, E‑Health Valley Hackathon 3.0",
+    "description": "Developed an informative platform enabling users to self-test breathing difficulty, guiding them to seek intervention when needed.",
+    "date": "September 2024"
+  },
+  {
+    "bgImage": "/images/tourismtech.png",
+    "title": "2nd Place, TourismTechJam",
+    "description": "Designed a modern mobile app integrating multiple Destination Management Organizations (DMOs) to address user travel needs, earning 2nd place.",
+    "date": "August 2024"
+  },
+  {
+    "bgImage": "/images/mentornations.jpg",
+    "title": "1st place Winner, HackurWaste Hackathon",
+    "description": "Built a mobile app integrated with a reverse vending machine for recycling plastic bottles, rewarding users with redeemable points for coupons.",
+    "date": "August 2022"
+  },
+  {
+    "bgImage": "/images/ECP.jpeg",
+    "title": "3rd Place, EPC3.0 Competitive Programming",
+    "description": "Achieved 3rd place in EPC3.0, a competitive programming contest for ENSI students, solving algorithmic challenges under time constraints.",
+    "date": "December 2023"
+  },
+  {
+    "bgImage": "/images/SYP.jpeg",
+    "title": "1st place winners, SYP6.0 Pitching Competition",
+    "description": "Brainstormed and pitched an innovative idea within a 5‑hour timeframe during the SYP6.0.",
+    "date": "December 2023"
+  }
+]
