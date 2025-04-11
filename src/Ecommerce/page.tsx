@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import ScrollToTop from "../components/ScrollTopButton";
 export default function Ecommerce() {
   // Scroll to top on page load
       useEffect(() => {
@@ -72,6 +73,7 @@ export default function Ecommerce() {
       <footer className="flex justify-center items-center w-full h-12 bg-background text-text-secondary border-t-1 border-border">
         <p>© 2025 Ahmed Trabelsi. All rights reserved.</p>
       </footer>
+      <ScrollToTop />
     </>
   );
 }

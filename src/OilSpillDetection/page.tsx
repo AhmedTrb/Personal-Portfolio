@@ -9,6 +9,7 @@ import modelArchitecture from "./assets/model overview.png";
 import dashboard from "./assets/dashboard.png";
 import dataset from "./assets/dataset.png";
 import { useEffect } from "react";
+import ScrollToTop from "../components/ScrollTopButton";
 
 export default function OilSpillDetection() {
   // Scroll to top on page load
@@ -295,6 +296,7 @@ export default function OilSpillDetection() {
       <footer className="flex justify-center items-center w-full h-12 bg-background text-text-secondary border-t-1 border-border">
         <p>© 2025 Ahmed Trabelsi. All rights reserved.</p>
       </footer>
+      <ScrollToTop />
     </>
   );
 }

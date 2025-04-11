@@ -2,6 +2,7 @@ import schemaImage from "./images/schema.png";
 import { Link } from "react-router-dom";
 import previewImage from "./images/preview.png";
 import { useEffect } from "react";
+import ScrollToTop from "../components/ScrollTopButton";
 type Props = {};
 
 export default function ProjectManagement({}: Props) {
@@ -251,6 +252,7 @@ export default function ProjectManagement({}: Props) {
       <footer className="flex justify-center items-center w-full h-12 bg-background text-text-secondary border-t-1 border-border">
         <p>© 2025 Ahmed Trabelsi. All rights reserved.</p>
       </footer>
+      <ScrollToTop />
     </>
   );
 }

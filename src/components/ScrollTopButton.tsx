@@ -27,7 +27,11 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-5 right-5 bg-white text-black p-3 rounded-full transition-opacity duration-300 ${isVisible ? "opacity-100" : "opacity-0"} z-50`}
+      className={`fixed bottom-5 right-5 bg-white text-black p-3 rounded-full cursor-pointer z-50
+    transition-all duration-300 transform
+    hover:scale-120 
+    ${isVisible ? "opacity-100" : "opacity-0"}
+  `}
     >
       <FaArrowUp size={20} />
     </button>

@@ -1,0 +1,29 @@
+[
+    {
+      "position": "Mobile Developer (MVP)",
+      "company": "Open Startup Tunisia",
+      "logo": "/images/logos/ost.png",
+      "place": "Remote",
+      "startDate": "2024-01",
+      "endDate": "2024-06",
+      "description": [
+        "Selected as the sole talent in the Open Startup Tunisia (OST) pan‑African accelerator",
+        "Built a Flutter MVP with API integrations and end‑to‑end testing, cutting development time by 30%",
+        "Gained practical startup insights, focusing on user‑centered features and market validation"
+      ]
+    },
+    {
+      "position": "Web Development Intern",
+      "company": "Graines d’Entrepreneurs",
+      "logo": "/images/logos/graines.png",
+      "place": "Hybrid",
+      "startDate": "2024-07",
+      "endDate": "2024-08",
+      "description": [
+        "Led development of a secure admin platform with JWT authentication, group & session management",
+        "Automated password generation & email notifications using Nodemailer, reducing admin workload by 40%",
+        "Implemented frontend & backend with the MERN stack, improving user experience and operational efficiency"
+      ]
+    }
+  ]
+  

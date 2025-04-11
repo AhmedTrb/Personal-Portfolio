@@ -7,50 +7,53 @@ import projects from "../assets/projects.json";
 import linkedinIcon from "../assets/icons/linkedin.svg";
 import githubIcon from "../assets/icons/github.svg";
 import emailIcon from "../assets/icons/gmail.svg";
-import SkillCard from "../components/SkillsCard";
+
 
 import ActivityCard from "../components/ActivityCard";
 import activities from "../assets/activities.json";
+import ScrollToTop from "../components/ScrollTopButton";
+
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const softwareSkills = [
-    "C/C++",
-    "Java",
-    "Python",
-    "Git & GitHub",
-    "Docker",
-    "SQL / PL-SQL",
-    "PostgreSQL",
-    "MongoDB",
-    "REST APIs",
-    "Postman",
-  ];
+  // const softwareSkills = [
+  //   "C/C++",
+  //   "Java",
+  //   "Python",
+  //   "Git & GitHub",
+  //   "Docker",
+  //   "SQL / PL-SQL",
+  //   "PostgreSQL",
+  //   "MongoDB",
+  //   "REST APIs",
+  //   "Postman",
+  // ];
 
-  const webMobileSkills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Express.js",
-    "MERN Stack",
-    "TailwindCSS",
-    "Flutter",
-    "Dart",
-  ];
+  // const webMobileSkills = [
+  //   "HTML",
+  //   "CSS",
+  //   "JavaScript",
+  //   "TypeScript",
+  //   "React",
+  //   "Next.js",
+  //   "Node.js",
+  //   "Express.js",
+  //   "MERN Stack",
+  //   "TailwindCSS",
+  //   "Flutter",
+  //   "Dart",
+  // ];
 
-  const aiDataScienceSkills = [
-    "Machine Learning",
-    "Scikit-learn",
-    "TensorFlow",
-    "NLP",
-    "Numpy",
-    "Pandas",
-    "Matplotlib",
-  ];
+  // const aiDataScienceSkills = [
+  //   "Machine Learning",
+  //   "Scikit-learn",
+  //   "TensorFlow",
+  //   "NLP",
+  //   "Numpy",
+  //   "Pandas",
+  //   "Matplotlib",
+  // ];
   return (
+    <>
     <div className="flex flex-col gap-y-16">
       {/* Landing Page */}
       <section className="flex flex-col h-screen">
@@ -111,6 +114,7 @@ export default function HomePage() {
               >
                 About
               </ScrollLink>
+              
               <div className="h-8 w-[1.5px] bg-border"></div>
               <ScrollLink
                 to="projects"
@@ -119,6 +123,15 @@ export default function HomePage() {
                 className="text-text-secondary cursor-pointer hover:text-white px-2"
               >
                 Projects
+              </ScrollLink>
+              <div className="h-8 w-[1.5px] bg-border"></div>
+              <ScrollLink
+                to="activities"
+                smooth={true}
+                duration={500}
+                className="text-text-secondary cursor-pointer hover:text-white px-2"
+              >
+                Activities
               </ScrollLink>
               <div className="h-8 w-[1.5px] bg-border"></div>
               <ScrollLink
@@ -163,24 +176,37 @@ export default function HomePage() {
           <ScrollLink
             to="about"
             smooth={true}
-            duration={500}
+            duration={400}
             className="block px-2 py-1 cursor-pointer"
+            onClick={() => setIsMenuOpen(false)} // Close menu when clicked
           >
             About
           </ScrollLink>
+          
           <ScrollLink
             to="projects"
             smooth={true}
             duration={500}
             className="block px-2 py-1 cursor-pointer"
+            onClick={() => setIsMenuOpen(false)} // Close menu when clicked
           >
             Projects
           </ScrollLink>
           <ScrollLink
+            to="activities"
+            smooth={true}
+            duration={600}
+            className="block px-2 py-1 cursor-pointer"
+            onClick={() => setIsMenuOpen(false)} // Close menu when clicked
+          >
+            Activities
+          </ScrollLink>
+          <ScrollLink
             to="contact"
             smooth={true}
-            duration={500}
+            duration={700}
             className="block cursor-pointer px-2 py-1"
+            onClick={() => setIsMenuOpen(false)} // Close menu when clicked
           >
             Contact
           </ScrollLink>
@@ -235,12 +261,12 @@ export default function HomePage() {
 
       {/* About Section */}
       <section
-        className="flex flex-col gap-y-6 w-full min-h-screen  px-6 md:px-12 lg:px-[7%] lg:w-2/3"
+        className="flex flex-col gap-y-6 w-full min-h-screen  justify-center px-6 md:px-12 lg:px-[7%] "
         id="about"
       >
         <h1 className="font-bold text-[4rem] text-white">About Me :</h1>
 
-        <p className="text-text-secondary text-2xl">
+        <p className="text-text-secondary text-2xl lg:w-2/3">
           I’m an aspiring software developer based in Tunis, Tunisia, currently
           pursuing a Computer Science Engineering degree at the{" "}
           <b className="text-white">
@@ -257,11 +283,8 @@ export default function HomePage() {
           and collaborating with like-minded people to create meaningful impact
           through technology.
         </p>
-      </section>
 
-      {/* Technologies */}
-      <section className="flex flex-col gap-y-6 px-6 md:px-12 lg:px-[7%] mb-[20%]">
-        <h1 className="font-bold text-[4rem]  text-white">Technologies</h1>
+        {/* <h1 className="font-bold text-[2rem] text-white">Technologies :</h1>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <SkillCard title="Software Engineering" skills={softwareSkills} />
           <SkillCard
@@ -269,34 +292,10 @@ export default function HomePage() {
             skills={webMobileSkills}
           />
           <SkillCard title="AI & Data Science" skills={aiDataScienceSkills} />
-        </div>
+        </div> */}
       </section>
-      {/* Activities */}
-      <section className="flex flex-col gap-y-6 w-full  px-6 md:px-12 lg:px-[7%]">
-        <h1 className="font-bold text-[4rem] text-white">Activities :</h1>
-        <p className="text-text-secondary text-lg w-full lg:w-2/3">
-          Participating in hackathons and competitions has been my sandbox for
-          experimentation, pushing me to learn new technologies on the fly. Each
-          challenge taught me resilience under pressure and the value of rapid
-          iteration.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-4">
-          {activities
-            .sort(
-              (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-            )
-            .map((activity, index) => (
-              <ActivityCard
-                key={index}
-                bgImage={activity.bgImage}
-                title={activity.title}
-                description={activity.description}
-                date={activity.date}
-              />
-            ))}
-        </div>
-      </section>
-
+      {/* Experiences */}
+      
       {/* Projects Section */}
       <section
         className="flex flex-col gap-y-6 w-full  px-6 md:px-12 lg:px-[7%]"
@@ -341,6 +340,32 @@ export default function HomePage() {
             ))}
         </motion.div>
       </section>
+      {/* Activities */}
+      <section className="flex flex-col gap-y-6 w-full  px-6 md:px-12 lg:px-[7%]" id="activities">
+        <h1 className="font-bold text-[4rem] text-white">Activities :</h1>
+        <p className="text-text-secondary text-lg w-full lg:w-2/3">
+          Participating in hackathons and competitions has been my sandbox for
+          experimentation, pushing me to learn new technologies on the fly. Each
+          challenge taught me resilience under pressure and the value of rapid
+          iteration.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6">
+          {activities
+            .sort(
+              (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+            )
+            .map((activity, index) => (
+              <ActivityCard
+                key={index}
+                bgImage={activity.bgImage}
+                title={activity.title}
+                description={activity.description}
+                date={activity.date}
+              />
+            ))}
+        </div>
+      </section>
+      {/* Contact */}
       <section
         className="flex flex-col gap-y-6 w-full  px-6 md:px-12 lg:px-[7%]"
         id="contact"
@@ -391,5 +416,7 @@ export default function HomePage() {
         <p>© 2025 Ahmed Trabelsi. All rights reserved.</p>
       </footer>
     </div>
+    <ScrollToTop />
+    </>
   );
 }

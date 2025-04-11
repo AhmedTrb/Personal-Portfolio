@@ -27,8 +27,8 @@ export default function ActivityCard({ bgImage, title, description, date }: Prop
         </h2>
 
         
-        <p className="text-md text-gray-300 mb-3 flex-grow"> 
-          {description}
+        <p className="text-md text-gray-300 mb-3 flex-grow" dangerouslySetInnerHTML={{ __html: description }}> 
+          
         </p>
 
         <p className="text-xs text-gray-400 text-center mt-auto pt-2"> 
