@@ -25,7 +25,7 @@ export default function HighlightExtractor() {
         id="case-study"
       >
         {/* Title & Overview */}
-        <h1 className="text-[2.5rem] lg:text-[3.5rem] font-bold leading-tight text-white">
+        <h1 className="text-[2rem] md:text-[3.5rem] mt-4 font-bold leading-tight text-white">
           PDF Highlight Extractor:
           <br /> Turning Scattered Highlights into Structured Knowledge
         </h1>
@@ -56,13 +56,13 @@ export default function HighlightExtractor() {
 
         {/* The Problem */}
         <div>
-          <h2 className="text-[3rem] text-white font-medium">The Problem</h2>
+          <h2 className="text-[3rem] text-white font-medium">The Problem :</h2>
           <p className="text-xl text-text-secondary">
             Despite highlighting valuable content in PDFs, most tools don’t make
             it easy to review or organize that information afterward. This leads
-            to:
+            to several issues:
           </p>
-          <ul className="list-disc flex flex-col gap-y-2 text-xl list-outside pl-5 mt-2 text-text-secondary">
+          <ul className="list-disc flex flex-col gap-y-2 text-xl list-outside pl-5 mt-4 text-text-secondary">
             <li>
               Highlights and comments becoming lost or forgotten after reading
             </li>
@@ -76,7 +76,7 @@ export default function HighlightExtractor() {
 
         {/* The Solution */}
         <div className="mt-10">
-          <h2 className="text-[3rem] text-white font-medium">The Solution</h2>
+          <h2 className="text-[3rem] text-white font-medium">The Solution :</h2>
           <p className="text-xl text-text-secondary">
             The PDF Highlight Extractor is a lightweight Python-based tool that:
           </p>
@@ -95,7 +95,7 @@ export default function HighlightExtractor() {
 
         {/* How It Works */}
         <div className="mt-10">
-          <h2 className="text-[3rem] text-white font-medium">How It Works</h2>
+          <h2 className="text-[3rem] text-white font-medium">How It Works :</h2>
           <ol className="list-decimal flex flex-col gap-y-2 text-xl list-outside pl-5 text-text-secondary">
             <li>
               User selects a PDF file containing highlights and/or comments
@@ -119,11 +119,12 @@ export default function HighlightExtractor() {
           <img
             src={app}
             alt="app UI"
-            className="rounded-lg shadow-lg object-cover h-[500px]"
+            className="rounded-lg shadow-lg object-contain h-[500px]"
           />
         </div>
+        <hr className="bg-border h-[1px] outline-none border-none"/>
         {/* Final Thoughts */}
-        <div className="mt-10">
+        <div>
           <h2 className="text-[3rem] text-white font-medium">Final Thoughts</h2>
           <p className="text-xl text-text-secondary">
             This tool isn’t meant to be a one-size-fits-all solution. Instead,

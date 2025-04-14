@@ -7,9 +7,9 @@ type Props = {};
 
 export default function ProjectManagement({}: Props) {
   // Scroll to top on page load
-      useEffect(() => {
-        window.scrollTo(0, 0);
-      }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       {/* Navbar */}
@@ -50,12 +50,12 @@ export default function ProjectManagement({}: Props) {
 
         {/* The Problem */}
         <div>
-          <h2 className="text-[3rem] text-white font-medium">The Problem</h2>
-          <p className="text-xl text-text-secondary">
+          <h2 className="text-[3rem] text-white font-medium">The Problem :</h2>
+          <p className="text-2xl text-text-secondary">
             Many project management tools struggle to clearly represent task
             dependencies, leading to challenges such as:
           </p>
-          <ul className="list-disc flex flex-col gap-y-2 text-xl list-outside pl-5 mt-2 text-text-secondary">
+          <ul className="list-disc flex flex-col gap-y-2 text-2xl list-outside pl-5 mt-2 text-text-secondary">
             <li>Unclear execution order of tasks</li>
             <li>Difficulties in identifying blocking tasks</li>
             <li>Lack of a visual, intuitive representation of projects</li>
@@ -64,7 +64,7 @@ export default function ProjectManagement({}: Props) {
         {/* OBJECTIVES */}
         <div className="flex flex-col py-6">
           <h2 className="text-[3rem] text-white font-medium">Objectives :</h2>
-          <ul className="list-disc list-outside pl-5 mt-2 text-2xl text-text-secondary">
+          <ul className="list-disc list-outside pl-5 mt-6 text-2xl text-text-secondary flex flex-col gap-y-2">
             <li>
               Develop a task visualization system that clearly represents
               dependencies.
@@ -87,21 +87,38 @@ export default function ProjectManagement({}: Props) {
         {/* FEATURES */}
         <div className="flex flex-col py-6">
           <h2 className="text-[3rem] text-white font-medium">Features :</h2>
-          <ul className="list-disc list-outside pl-5 mt-2 text-2xl text-text-secondary">
+          <ul className="list-disc list-outside pl-5 mt-6 text-2xl text-text-secondary flex flex-col gap-y-2">
             <li>
-              Task Dependency Visualization: Displays tasks as a directed graph.
+              Task Dependency Visualization: Displays tasks as a directed graph
+              using{" "}
+              <span className="text-white font-bold hover:underline">
+                <a href="https://reactflow.dev">Reactflow</a>
+              </span>{" "}
+              a customizable React component for building node-based editors and
+              interactive diagrams.
             </li>
             <li>
-              Automated Execution Order: Uses Kahn’s algorithm to determine task
-              ranking.
+              Automated Execution Order: Uses{" "}
+              <span className="text-white font-bold">Kahn’s algorithm</span> to
+              determine task ranking.
+            </li>
+            <li>
+              Global State Management: Leverages{" "}
+              <span className="text-white font-bold">
+                Redux / Redux Toolkit
+              </span>{" "}
+              to keep task, user, and UI state predictable and easy to maintain.
             </li>
             <li>
               Role-Based Access Control: Admins can create projects and assign
               tasks; team members can track dependencies.
             </li>
             <li>
-              Secure Authentication System: Implements JWT-based access and
-              refresh tokens for user sessions.
+              Secure Authentication System: Implements{" "}
+              <span className="text-white font-bold">
+                JWT-based access and refresh tokens
+              </span>{" "}
+              for user sessions.
             </li>
             <li>
               Deployment: Frontend on Vercel, backend on Render, database on
@@ -111,13 +128,25 @@ export default function ProjectManagement({}: Props) {
         </div>
         {/* Technical Overview */}
         <div className="flex flex-col gap-6">
-          <h2 className="text-[3rem] text-white font-medium border-b-2 border-border">
+          <h2 className="md:text-[3rem] text-[2.75rem] text-white font-medium border-b-2 border-border">
             Technical Overview :
           </h2>
+          {/* Tech Stack */}
+          <div className="flex flex-col gap-4 py-6">
+            <h2 className="text-[2rem] text-primary font-medium">Tech Stack :</h2>
+            <p className="text-xl text-text-secondary">
+              Frontend built with <strong className="text-white">Next.js</strong>, backend powered by{" "}
+              <strong className="text-white">Express.js</strong>, and data stored in{" "}
+              <strong className="text-white">PostgreSQL</strong> hosted on Neon. We use
+              <strong className="text-white">Prisma ORM</strong> for type‑safe database access and
+              experimented with Tailwind CSS component libraries to speed up UI
+              development (MUI and Shadcn UI).
+            </p>
+          </div>
           {/* Database Schema & Relationships */}
           <div className="flex flex-col gap-6">
             <h2 className="text-[2rem] text-primary font-medium">
-              Database Schema & Relationships
+              Database Schema & Relationships :
             </h2>
             <p className="text-xl text-text-secondary">
               To model projects, tasks, users, and dependencies, the following
@@ -136,7 +165,7 @@ export default function ProjectManagement({}: Props) {
           {/* Kahn's Algorithm Implementation */}
           <div className="flex flex-col gap-6 py-6">
             <h2 className="text-[2rem] text-primary font-medium">
-              Kahn’s Algorithm for Task Ordering
+              Kahn’s Algorithm for Task Ordering :
             </h2>
             <p className="text-xl text-text-secondary">
               The application utilizes Kahn’s algorithm to determine task
@@ -167,7 +196,7 @@ export default function ProjectManagement({}: Props) {
           {/* Node Visualization Based on Task Degree */}
           <div className="flex flex-col gap-6 py-6">
             <h2 className="text-[2rem] text-white font-medium">
-              Node Visualization Based on Task Dependencies
+              Node Visualization Based on Task Dependencies :
             </h2>
             <p className="text-xl text-text-secondary">
               Tasks are positioned based on their dependencies to create a clear
@@ -190,7 +219,7 @@ export default function ProjectManagement({}: Props) {
           {/* Authentication System */}
           <div className="flex flex-col gap-6 py-6">
             <h2 className="text-[2rem] text-white font-medium">
-              Secure Authentication Flow
+              Secure Authentication Flow :
             </h2>
             <p className="text-xl text-text-secondary">
               The authentication system follows a secure JWT-based approach with
@@ -224,14 +253,30 @@ export default function ProjectManagement({}: Props) {
             <h2 className="text-[3rem] text-white font-medium border-b-2 border-border">
               Conclusion & Key Takeaways
             </h2>
+
             <p className="text-xl text-text-secondary">
-              This project combines graph-based visualization with automated
+              This project combines graph‑based visualization with automated
               task ordering to simplify project management. By clearly
-              displaying task dependencies and execution order, it helps teams
-              identify bottlenecks, streamline workflows, and improve overall
-              project tracking. With secure authentication and team
-              collaboration features, it provides an efficient and intuitive way
-              to manage complex projects.
+              displaying dependencies and execution order, teams can spot
+              bottlenecks, streamline workflows, and keep projects on track.
+              Secure JWT authentication and built‑in collaboration tools make it
+              both efficient and intuitive for any team size.
+            </p>
+
+            <p className="text-xl text-text-secondary">
+              I was inspired by{" "}
+              <a
+                href="https://www.odoo.com/event/odoo-experience-2024-4662/track/gantt-view-dependencies-6355"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:underline font-semibold transition-colors"
+              >
+                this video
+              </a>
+              , which demonstrates Kahn’s algorithm and other scheduling
+              techniques in a Gantt‑view. Seeing those algorithms in action
+              motivated me to build a live graph visualization, bringing task
+              dependencies and execution order to life.
             </p>
           </div>
         </div>

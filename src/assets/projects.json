@@ -1,17 +1,17 @@
 [
   {
     "title": "Project Management Graph Tool",
-    "description": "A project management application that visualizes tasks as a directed graph using Kahn’s algorithm for topological sorting. Includes team management and task assignment.",
+    "description": "A project management application that visualizes projects as a directed graph using Kahn’s algorithm for topological sorting. Includes team management and task assignment.",
     "image": "./images/projectM.png",
     "href": "/project-management",
-    "tags": ["Next.js", "Graph Algorithms", "Express.js", "PostgreSQL","Prisma","Typescript","Tailwind CSS"],
+    "tags": ["Next.js", "Khan's Algorithm", "Express.js", "PostgreSQL","Prisma","Typescript","Tailwind CSS","Redux","Redux Toolkit"],
     "github": "https://github.com/AhmedTrb/Project-Management-web-app",
     "demo": "https://project-management-web-app-lilac.vercel.app",
     "date": "2025-02"
   },
     {
       "title": "Oil Spill Detection with AI",
-      "description": "Developed a deep learning model to detect oil spills in the Mediterranean using SAR satellite images. The project included data preprocessing, model training, and visualization on a web platform.",
+      "description": "Developed a deep learning model to detect oil spills the sea using SAR satellite images. The project included data preprocessing, model training, and visualization on a web platform.",
       "image": "./images/AESS.png",
       "href": "/med-guard",
       "tags": ["Computer Vision", "Deep Learning", "Satellite Imaging","Python","Tensorflow"],
@@ -32,7 +32,7 @@
       "description": "A personal portfolio showcasing my projects, experience, and skills, built with React and Tailwind CSS for a clean and modern design.",
       "image": "./images/portfolio.png",
       "href": "#",
-      "tags": ["React", "Tailwind CSS", "Frontend"],
+      "tags": ["React", "Tailwind CSS"],
       "github": "https://github.com/AhmedTrb/Personal-Portfolio",
       "date": "2025-03"
     },
@@ -42,7 +42,7 @@
       "description": "A full-stack e-commerce website using HTML, CSS, JavaScript for the frontend, and PHP with MySQL for back-end. It includes user authentication, product management, and order processing.",
       "image": "./images/ecommerce.png",
       "href": "ecommerce",
-      "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL","SQL"],
       "github": "https://github.com/AhmedTrb/E-commerce-web-project",
       "date": "2024-03"
     }

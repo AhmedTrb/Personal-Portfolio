@@ -18,7 +18,7 @@ export default function Ecommerce() {
       {/* CASE STUDY */}
       <section className="flex flex-col justify-start px-6 md:px-12 lg:px-[20%] gap-12 py-6 pt-18">
         {/* Title & Overview */}
-        <h1 className="text-[2.5rem] lg:text-[3.5rem] font-bold leading-tight text-white">
+        <h1 className="text-[2.5rem] lg:text-[3.5rem] font-bold leading-tight text-white mt-4">
           SetUpSprint: A High-Quality PC Components E-commerce Platform
         </h1>
         <div>
@@ -49,7 +49,7 @@ export default function Ecommerce() {
             <li>User Authentication for secure sign-up, login, and logout.</li>
             <li>Dynamic Product Listings categorized by type and brand.</li>
             <li>
-              Integrated Web Scraping Module to load product data dynamically.
+              Integrated Web Scraping Module to load product data dynamically using <span className="text-white font-medium">Beautifulsoup</span>.
             </li>
             <li>Shopping Cart and Seamless Checkout Process.</li>
             <li>User Profile for managing orders and account details.</li>

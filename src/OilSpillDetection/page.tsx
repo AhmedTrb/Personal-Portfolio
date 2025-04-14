@@ -37,7 +37,7 @@ export default function OilSpillDetection() {
         </div>
         {/* Title & Overview */}
         <div className="flex flex-col gap-y-6">
-          <h1 className="text-[2.5rem] font-bold leading-tight text-white">
+          <h1 className="text-[2rem] md:text-[3rem] font-bold leading-tight text-white">
             MedGuard – An AI-Powered Oil Spill Detection and Monitoring Solution
           </h1>
           <p className="text-xl text-text-secondary">
@@ -55,18 +55,18 @@ export default function OilSpillDetection() {
         {/* Context of this Challenge */}
         <div className="flex flex-col gap-y-6">
           <h2 className="text-[3rem] text-white font-medium">
-            Context of the Challenge
+            Context of the Challenge :
           </h2>
           <div className="flex flex-col-reverse justify-center items-center gap-y-6 md:flex-row md:gap-x-12">
             <div className="flex flex-col items-center md:items-start">
               <p className="text-xl text-text-secondary">
                 This project was part of the{" "}
-                <strong className="text-white">
+                <strong className="text-white hover:underline">
                   AESS (Aerospace and Electronic Systems Society)
                 </strong>{" "}
                 Technical Challenge during the{" "}
-                <strong className="text-white">
-                  IEEE TSYP12 National Congress.{" "}
+                <strong className="text-white hover:underline cursor-pointer">
+                  <a href="https://tsyp.ieee.tn" target="_blank" rel="noopener noreferrer">IEEE TSYP12 National Congress.{" "}</a>
                 </strong>
                 <br />
                 <br /> The main goal of this challenge was to inspire and
@@ -98,10 +98,10 @@ export default function OilSpillDetection() {
 
         {/* Our Approach and Problem Discovery */}
         <div>
-          <h2 className="text-[3rem] text-white font-medium">
-            Our Approach and Problem Discovery
+          <h2 className="md:text-[3rem] text-[2.4rem] text-white font-medium leading-tight">
+            Our Approach and Problem Discovery :
           </h2>
-          <p className="text-xl text-text-secondary">
+          <p className="text-xl text-text-secondary mt-4">
             We explored the vast potential of satellite imagery and remote
             sensing. We focused on{" "}
             <strong className="text-white">
@@ -121,9 +121,9 @@ export default function OilSpillDetection() {
             <img
               src={oilSpill}
               alt="Example of Oil Spill Detected in SAR Image"
-              className="rounded-lg object-cover h-[500px]"
+              className="rounded-lg object-cover md:h-[500px]"
             />
-            <p className="text-xl text-text-secondary mt-4">
+            <p className="text-xl text-center text-text-secondary mt-4">
               - Example of Oil Spill Detected in SAR Image -
             </p>
           </div>
@@ -131,10 +131,10 @@ export default function OilSpillDetection() {
 
         {/* Technical Overview */}
         <div className="flex flex-col gap-y-6">
-          <h2 className="text-[3rem] text-white font-medium">
-            Technical Overview
+          <h2 className="md:text-[3rem] text-[2.4rem] text-white font-medium">
+            Technical Overview :
           </h2>
-          <p className="text-xl text-text-secondary">
+          <p className="text-xl text-text-secondary mt-4">
             <strong className="text-white">MedGuard</strong> was our solution –
             an AI-powered system designed to detect oil spills early, whether
             caused by ship accidents or illegal discharges. Our primary focus
@@ -194,7 +194,7 @@ export default function OilSpillDetection() {
             <img
               src={modelArchitecture}
               alt="CGAN Architecture & Web Platform Dashboard"
-              className="object-cover"
+              className="object-contain rounded-lg"
             />
           </div>
         </div>
@@ -233,12 +233,6 @@ export default function OilSpillDetection() {
                 need for better regularization.
               </li>
               <li>
-                <strong className="text-white">Training Limitations:</strong>{" "}
-                With only 1 hour per epoch on our local hardware, fine-tuning
-                hyperparameters or testing alternative architectures (e.g.,
-                U-Net variants) was impractical. minimal.
-              </li>
-              <li>
                 <strong className="text-white">
                   Data Augmentation & Regularization:
                 </strong>{" "}
@@ -272,8 +266,8 @@ export default function OilSpillDetection() {
                 Oumayma Hammami
               </a>
             </strong>
-            , <strong className="text-white">Nada Ben Abdelhafidh</strong>, and{" "}
-            <strong className="text-white">Atef Regaya</strong>. Their
+            , <strong className="text-white hover:underline "><a href="https://www.linkedin.com/in/nada-ben-abdelhafidh-859b12354/" target="_blank">Nada Ben Abdelhafidh</a></strong>, and{" "}
+            <strong className="text-white hover:underline cursor-pointer">Atef Regaya</strong>. Their
             contributions and commitment were invaluable throughout this
             journey.
           </p>
