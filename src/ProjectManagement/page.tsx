@@ -133,14 +133,23 @@ export default function ProjectManagement({}: Props) {
           </h2>
           {/* Tech Stack */}
           <div className="flex flex-col gap-4 py-6">
-            <h2 className="text-[2rem] text-primary font-medium">Tech Stack :</h2>
+            <h2 className="text-[2rem] text-primary font-medium">
+              Tech Stack :
+            </h2>
             <p className="text-xl text-text-secondary">
-              Frontend built with <strong className="text-white">Next.js</strong>, backend powered by{" "}
-              <strong className="text-white">Express.js</strong>, and data stored in{" "}
-              <strong className="text-white">PostgreSQL</strong> hosted on Neon. We use
-              <strong className="text-white">Prisma ORM</strong> for type‑safe database access and
-              experimented with Tailwind CSS component libraries to speed up UI
-              development (MUI and Shadcn UI).
+              Frontend built with{" "}
+              <strong className="text-white">Next.js</strong> and styled using{" "}
+              <strong className="text-white">Tailwind CSS</strong>, enhanced
+              with component libraries like{" "}
+              <strong className="text-white">MUI</strong> and{" "}
+              <strong className="text-white">Shadcn UI</strong>. Backend powered
+              by <strong className="text-white">Express.js</strong> with a{" "}
+              <strong className="text-white">PostgreSQL</strong> database hosted
+              on <strong className="text-white">Neon</strong>, accessed via{" "}
+              <strong className="text-white">Prisma ORM</strong> for type-safe
+              queries. Integrated <strong className="text-white">Redux</strong>{" "}
+              and <strong className="text-white">Redux Toolkit</strong> for
+              efficient global state management and a seamless user experience.
             </p>
           </div>
           {/* Database Schema & Relationships */}
