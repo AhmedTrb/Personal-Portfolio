@@ -156,7 +156,7 @@ export default function HomePage() {
                 </ScrollLink>
                 <div className="bg-white px-3 py-1 rounded-lg font-medium text-background">
                   <a
-                    href="https://drive.google.com/file/d/1JYG8O2Ur4f5qBbQCMeaNxFKo8e2bI-iN/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1Bh5LwxFMYEp4Q7I9QclVWKlm-w-4WfCw/view?usp=sharing"
                     target="_blank"
                   >
                     Resume
@@ -223,7 +223,7 @@ export default function HomePage() {
               Contact
             </ScrollLink>
             <a
-              href="https://drive.google.com/file/d/1JYG8O2Ur4f5qBbQCMeaNxFKo8e2bI-iN/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Bh5LwxFMYEp4Q7I9QclVWKlm-w-4WfCw/view?usp=sharing"
               className="block px-2 py-1 bg-white text-black rounded-lg"
             >
               Resume
