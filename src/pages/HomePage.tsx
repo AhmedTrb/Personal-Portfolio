@@ -70,9 +70,11 @@ export default function HomePage() {
         {/* Landing Page */}
         <section className="flex flex-col h-screen">
           {/* Navbar */}
-          <div className="flex justify-between items-center w-full border-b-2 border-[var(--color-border)] py-4 px-6 md:px-12 lg:px-[7%] h-18">
+          <div className="fixed mb-18 flex justify-between items-center w-full border-b-2 border-border py-4 px-6 md:px-12 lg:px-[7%] h-18 z-50 bg-background">
             {/* NAME */}
-            <div className="text-2xl font-bold cursor-pointer">AT</div>
+            <div className="text-xl text-white lg:text-2xl font-bold cursor-pointer">
+              AHMED TRABELSI
+            </div>
 
             {/* Navigation */}
             <div className="flex items-center z-20">
@@ -163,75 +165,77 @@ export default function HomePage() {
                   </a>
                 </div>
               </div>
+              {/* Mobile Menu (Shown when hamburger is clicked) */}
+              {/* Blur Overlay (When menu is open) */}
+              {isMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="inset-0 bg-black/50 backdrop-blur-md z-49 absolute top-18 w-screen h-screen"
+                  onClick={() => setIsMenuOpen(false)} // Clicking the overlay closes the menu
+                ></motion.div>
+              )}
+
+              {/* Animated Dropdown Menu */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={
+                  isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }
+                }
+                transition={{ duration: 0.3 }}
+                className={`absolute top-[4.1rem] left-0 w-full bg-background text-white flex flex-col items-center space-y-4 px-6 py-4 z-50 `}
+              >
+                <ScrollLink
+                  to="about"
+                  smooth={true}
+                  duration={400}
+                  className="block px-2 py-1 cursor-pointer"
+                  onClick={() => setIsMenuOpen(false)} // Close menu when clicked
+                >
+                  About
+                </ScrollLink>
+
+                <ScrollLink
+                  to="projects"
+                  smooth={true}
+                  duration={500}
+                  className="block px-2 py-1 cursor-pointer"
+                  onClick={() => setIsMenuOpen(false)} // Close menu when clicked
+                >
+                  Projects
+                </ScrollLink>
+                <ScrollLink
+                  to="activities"
+                  smooth={true}
+                  duration={600}
+                  className="block px-2 py-1 cursor-pointer"
+                  onClick={() => setIsMenuOpen(false)} // Close menu when clicked
+                >
+                  Activities
+                </ScrollLink>
+                <ScrollLink
+                  to="contact"
+                  smooth={true}
+                  duration={700}
+                  className="block cursor-pointer px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)} // Close menu when clicked
+                >
+                  Contact
+                </ScrollLink>
+                <a
+                  href="https://drive.google.com/file/d/1Bh5LwxFMYEp4Q7I9QclVWKlm-w-4WfCw/view?usp=sharing"
+                  className="block px-2 py-1 bg-white text-black rounded-lg"
+                >
+                  Resume
+                </a>
+              </motion.div>
             </div>
           </div>
 
-          {/* Mobile Menu (Shown when hamburger is clicked) */}
-          {/* Blur Overlay (When menu is open) */}
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="inset-0 bg-black/50 backdrop-blur-md z-40 absolute top-18 w-screen h-full"
-              onClick={() => setIsMenuOpen(false)} // Clicking the overlay closes the menu
-            ></motion.div>
-          )}
-
-          {/* Animated Dropdown Menu */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={isMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className={`absolute top-[4.1rem] left-0 w-full bg-background text-white flex flex-col items-center space-y-4 px-6 py-4 z-50 `}
-          >
-            <ScrollLink
-              to="about"
-              smooth={true}
-              duration={400}
-              className="block px-2 py-1 cursor-pointer"
-              onClick={() => setIsMenuOpen(false)} // Close menu when clicked
-            >
-              About
-            </ScrollLink>
-
-            <ScrollLink
-              to="projects"
-              smooth={true}
-              duration={500}
-              className="block px-2 py-1 cursor-pointer"
-              onClick={() => setIsMenuOpen(false)} // Close menu when clicked
-            >
-              Projects
-            </ScrollLink>
-            <ScrollLink
-              to="activities"
-              smooth={true}
-              duration={600}
-              className="block px-2 py-1 cursor-pointer"
-              onClick={() => setIsMenuOpen(false)} // Close menu when clicked
-            >
-              Activities
-            </ScrollLink>
-            <ScrollLink
-              to="contact"
-              smooth={true}
-              duration={700}
-              className="block cursor-pointer px-2 py-1"
-              onClick={() => setIsMenuOpen(false)} // Close menu when clicked
-            >
-              Contact
-            </ScrollLink>
-            <a
-              href="https://drive.google.com/file/d/1Bh5LwxFMYEp4Q7I9QclVWKlm-w-4WfCw/view?usp=sharing"
-              className="block px-2 py-1 bg-white text-black rounded-lg"
-            >
-              Resume
-            </a>
-          </motion.div>
-
           {/* HERO SECTION */}
-          <div className="flex flex-col-reverse md:flex-row items-center justify-center lg:justify-between w-full min-h-screen px-6 md:px-12 lg:px-[7%] gap-6 py-8 mt-4">
+          <div className="flex flex-col-reverse md:flex-row items-center justify-center lg:justify-between w-full min-h-screen px-6 md:px-12 lg:px-[7%] gap-6 py-8 mt-18">
+
             {/* Text Content */}
             <div className="relative flex flex-col-reverse md:flex-row items-center gap-8 px-6 md:px-12 lg:px-24 py-16">
               {/* Text Content */}
@@ -241,7 +245,9 @@ export default function HomePage() {
                 animate="visible"
                 variants={{
                   hidden: {},
-                  visible: { transition: { staggerChildren: 0.2 , delayChildren: 0.5} },
+                  visible: {
+                    transition: { staggerChildren: 0.2, delayChildren: 0.5 },
+                  },
                 }}
               >
                 <motion.h1
@@ -344,7 +350,7 @@ export default function HomePage() {
         </div> */}
         </section>
         {/* Experiences */}
-        
+
         {/* Projects Section */}
         <section
           className="flex flex-col gap-y-6 w-full  px-6 md:px-12 lg:px-[7%]"
