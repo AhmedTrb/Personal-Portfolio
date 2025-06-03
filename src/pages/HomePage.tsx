@@ -11,6 +11,7 @@ import emailIcon from "../assets/icons/gmail.svg";
 import ActivityCard from "../components/ActivityCard";
 import activities from "../assets/activities.json";
 import ScrollToTop from "../components/ScrollTopButton";
+import { ExperienceTimeline } from "../components/ExperienceTimeline";
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -66,7 +67,7 @@ export default function HomePage() {
   // ];
   return (
     <>
-      <div className="flex flex-col gap-y-16">
+      <div className="flex flex-col gap-y-16 bg-background">
         {/* Landing Page */}
         <section className="flex flex-col h-screen">
           {/* Navbar */}
@@ -128,6 +129,15 @@ export default function HomePage() {
                 >
                   About
                 </ScrollLink>
+                <div className="h-8 w-[2px] bg-border"></div>
+                <ScrollLink
+                  to="experiences"
+                  smooth={true}
+                  duration={500}
+                  className="text-text-secondary cursor-pointer hover:text-white px-2"
+                >
+                  Experiences
+                </ScrollLink>
 
                 <div className="h-8 w-[1.5px] bg-border"></div>
                 <ScrollLink
@@ -158,7 +168,7 @@ export default function HomePage() {
                 </ScrollLink>
                 <div className="bg-white px-3 py-1 rounded-lg font-medium text-background">
                   <a
-                    href="https://drive.google.com/file/d/1Bh5LwxFMYEp4Q7I9QclVWKlm-w-4WfCw/view?usp=sharing"
+                    href="https://drive.google.com/file/d/12DIWkuFASaXp53zeXgQ1EF4BiBs7Cq9Y/view?usp=sharing"
                     target="_blank"
                   >
                     Resume
@@ -195,6 +205,15 @@ export default function HomePage() {
                 >
                   About
                 </ScrollLink>
+                <ScrollLink
+                  to="experiences"
+                  smooth={true}
+                  duration={500}
+                  className="block px-2 py-1 cursor-pointer"
+                  onClick={() => setIsMenuOpen(false)} // Close menu when clicked
+                >
+                  Experiences
+                </ScrollLink>
 
                 <ScrollLink
                   to="projects"
@@ -208,7 +227,7 @@ export default function HomePage() {
                 <ScrollLink
                   to="activities"
                   smooth={true}
-                  duration={600}
+                  duration={800}
                   className="block px-2 py-1 cursor-pointer"
                   onClick={() => setIsMenuOpen(false)} // Close menu when clicked
                 >
@@ -217,14 +236,14 @@ export default function HomePage() {
                 <ScrollLink
                   to="contact"
                   smooth={true}
-                  duration={700}
+                  duration={900}
                   className="block cursor-pointer px-2 py-1"
                   onClick={() => setIsMenuOpen(false)} // Close menu when clicked
                 >
                   Contact
                 </ScrollLink>
                 <a
-                  href="https://drive.google.com/file/d/1Bh5LwxFMYEp4Q7I9QclVWKlm-w-4WfCw/view?usp=sharing"
+                  href="https://drive.google.com/file/d/12DIWkuFASaXp53zeXgQ1EF4BiBs7Cq9Y/view?usp=sharing"
                   className="block px-2 py-1 bg-white text-black rounded-lg"
                 >
                   Resume
@@ -234,8 +253,9 @@ export default function HomePage() {
           </div>
 
           {/* HERO SECTION */}
-          <div className="flex flex-col-reverse md:flex-row items-center justify-center lg:justify-between w-full min-h-screen px-6 md:px-12 lg:px-[7%] gap-6 py-8 mt-18">
 
+          
+            <div className="flex flex-col-reverse md:flex-row items-center justify-center lg:justify-between w-full min-h-screen px-6 md:px-12 lg:px-[7%] gap-6 py-8 mt-18">
             {/* Text Content */}
             <div className="relative flex flex-col-reverse md:flex-row items-center gap-8 px-6 md:px-12 lg:px-24 py-16">
               {/* Text Content */}
@@ -312,6 +332,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+          
         </section>
 
         {/* About Section */}
@@ -349,11 +370,19 @@ export default function HomePage() {
           <SkillCard title="AI & Data Science" skills={aiDataScienceSkills} />
         </div> */}
         </section>
-        {/* Experiences */}
 
-        {/* Projects Section */}
+        {/* Experiences */}
         <section
-          className="flex flex-col gap-y-6 w-full  px-6 md:px-12 lg:px-[7%]"
+          className="flex flex-col gap-y-10 w-full pt-18 px-6 md:px-12 lg:px-[7%]"
+          id="experiences">
+            <h1 className="font-bold text-[4rem] text-white"> Experiences :</h1>
+            <ExperienceTimeline />
+          </section>
+        {/* Projects Section */}
+
+
+        <section
+          className="flex flex-col gap-y-6 w-full pt-18  px-6 md:px-12 lg:px-[7%]"
           id="projects"
         >
           <h1 className="font-bold text-[4rem] text-white">Projects :</h1>
@@ -397,9 +426,11 @@ export default function HomePage() {
               ))}
           </motion.div>
         </section>
+
+
         {/* Activities */}
         <section
-          className="flex flex-col gap-y-6 w-full  px-6 md:px-12 lg:px-[7%]"
+          className="flex flex-col gap-y-6 w-full pt-18  px-6 md:px-12 lg:px-[7%]"
           id="activities"
         >
           <h1 className="font-bold text-[4rem] text-white">Activities :</h1>

@@ -2,12 +2,21 @@
   {
     "title": "Project Management Graph Tool",
     "description": "A project management application that visualizes projects as a directed graph using Kahn’s algorithm for topological sorting. Includes team management and task assignment.",
-    "image": "./images/projectM.png",
+    "image": "./images/landing.png",
     "href": "/project-management",
     "tags": ["Next.js", "Khan's Algorithm", "Express.js", "PostgreSQL","Prisma","Typescript","Tailwind CSS","Redux","Redux Toolkit"],
     "github": "https://github.com/AhmedTrb/Project-Management-web-app",
     "demo": "https://project-management-web-app-lilac.vercel.app",
     "date": "2025-02"
+  },
+  {
+    "title": "AI-Powered Market Research & Analysis Tool",
+    "description": "A comprehensive solution leveraging a Retrieval Augmented Generation (RAG) architecture to automate market analysis. It extracts, analyzes, and synthesizes unstructured web data into actionable, structured reports on trends, sentiments, and key entities.",
+    "image": "./images/market_research_cover.png",
+    "href": "/market-research",
+    "tags": ["Python", "Flask", "React", "ChromaDB", "LangChain", "Google Generative AI", "NLP"],
+    "github": "github.com/AhmedTrb/RAG-Solution-for-Market-Research/",
+    "date": "2025-05 03"
   },
     {
       "title": "Oil Spill Detection with AI",

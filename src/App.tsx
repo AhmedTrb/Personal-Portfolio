@@ -5,6 +5,7 @@ import ProjectManagement from "./ProjectManagement/page";
 import HighlightExtractor from "./HighlightExtractor/page";
 import OilSpillDetection from "./OilSpillDetection/page";
 import Ecommerce from "./Ecommerce/page";
+import MarketResearch from "./MarketResearch/page";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/highlight-extractor" element={<HighlightExtractor />} />
         <Route path="/med-guard" element={<OilSpillDetection />} />
         <Route path="/ecommerce" element={<Ecommerce />} />
+        <Route path="/market-research" element={<MarketResearch />} />
       </Routes>
     </>
   )
